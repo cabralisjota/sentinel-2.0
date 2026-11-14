@@ -25,6 +25,7 @@ and threat visualization.
 - Leaflet.js
 - GeoJSON
 - Canvas API
+- Termux
 
 ## Installation
 
@@ -38,7 +39,7 @@ Run the application:
 
 Open:
 
-    http://127.0.0.1:5000
+    https://sentinel-2-0.onrender.com/
 
 ## Project Status
 Educational prototype under active development.
