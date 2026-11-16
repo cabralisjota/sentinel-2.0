@@ -19,3 +19,6 @@ login.json
 .env
 .env.*
 __pycache__/
+
+# Unified Access SOC local state
+/.access_soc/
