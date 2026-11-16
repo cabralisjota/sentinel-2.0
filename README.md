@@ -32,7 +32,7 @@ python -m pip install flask
 python app.py
 ```
 
-Open **http://127.0.0.1:5000/** in a browser on the same device.
+Open https://sentinel-2-0.onrender.com/ or **http://127.0.0.1:5000/** in a browser on the same device. 
 
 The 3D globe may require a WebGL-capable browser and an internet connection for externally loaded JavaScript or geographic assets. The default Flask server binds to localhost for development.
 
