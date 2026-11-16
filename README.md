@@ -1,194 +1,53 @@
-<!-- portfolio-overview:start -->
+# Sentinel 2.0
 
-# 🛡️ Sentinel 2.0
+**Security Monitoring & Visualization | Purple Team Engineering | Full-Stack Development**
 
-### Python Cybersecurity Dashboard | Security Monitoring | Flask
+Sentinel 2.0 is a Python/Flask cybersecurity dashboard exploring how security events can be collected, classified, visualized, and analyzed. It combines a backend JSON API with an interactive browser interface and a WebGL 3D Earth visualization.
 
-Sentinel 2.0 is a Python-based cybersecurity
-dashboard designed for exploring security-event
-monitoring, threat visualization, and
-intrusion-detection workflows.
+> **Project status:** Portfolio / lab prototype. The current event feed is **simulated**, not a live intrusion detection system or evidence of real attacks.
 
-The project provides a hands-on environment
-for developing and testing defensive security
-analytics.
+## Features
 
-## 🎯 Project Objectives
+- Interactive WebGL 3D Earth visualization with geographic event markers and animated activity routes
+- Security-event feed with event type, severity, timestamp, IP, and location
+- Charts, dashboard navigation, and responsive interface
+- Flask backend and JSON endpoint (`/api/events`)
+- Simulated events for repeatable UI and analytics demonstrations
+- Browser-based visualization with fallback behavior where WebGL is unavailable
 
-- Explore security operations center workflows
-- Visualize security events in a web dashboard
-- Experiment with intrusion detection
-- Analyze suspicious network activity
-- Develop Python security automation skills
-- Connect security analysis tools together
+## Technology
 
-## ⚡ Features
+| Layer | Tools |
+| --- | --- |
+| Backend | Python, Flask |
+| Frontend | HTML, CSS, JavaScript |
+| Visualization | WebGL, interactive 3D globe, charts |
+| API | JSON over HTTP |
+| Development | Termux (Android), Git, GitHub |
 
-- Flask-based security dashboard
-- Security-event visualization
-- Simulated security activity for testing
-- Security monitoring experiments
-- Experimental integration with offline
-  packet-capture and intrusion-detection tools
-
-## 🏗️ Architecture
-
-```mermaid
-flowchart TD
-    A["Simulated Security Events"]
-    B["Offline Network Analysis"]
-    C["Python Event Processing"]
-    D["Flask Application"]
-    E["Security Dashboard"]
-
-    A --> C
-    B -. "Experimental integration" .-> C
-    C --> D
-    D --> E
-```
-
-## 🛠️ Technology Stack
-
-| Technology | Purpose |
-|---|---|
-| Python | Security analysis and backend logic |
-| Flask | Web application framework |
-| HTML / CSS | Dashboard interface |
-| Git / GitHub | Version control |
-| Network analysis | Security research and testing |
-
-## 🔍 Security Research Focus
-
-**Security Monitoring**
-
-Experimenting with methods for organizing
-and displaying security events.
-
-**Intrusion Detection**
-
-Exploring how suspicious network behavior
-can be identified and reported.
-
-**Security Automation**
-
-Developing Python workflows that support
-repeatable security analysis.
-
-**System Integration**
-
-Investigating connections between packet
-analysis tools and centralized dashboards.
-
-## 🚀 Getting Started
-
-Clone the project:
+## Run locally
 
 ```bash
-git clone https://github.com/cabralisjota/sentinel-2.0.git
-cd sentinel-2.0
-```
-
-Install Python dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Start the Flask application:
-
-```bash
+python -m pip install flask
 python app.py
 ```
 
-Use the local address displayed by Flask to
-access the dashboard.
+Open **http://127.0.0.1:5000/** in a browser on the same device.
 
-## 🗺️ Development Roadmap
+The 3D globe may require a WebGL-capable browser and an internet connection for externally loaded JavaScript or geographic assets. The default Flask server binds to localhost for development.
 
-- [ ] Expand security-event analysis
-- [ ] Improve dashboard filtering
-- [ ] Add more detection experiments
-- [ ] Improve network-forensics integration
-- [ ] Add reproducible test datasets
-- [ ] Document deployment and configuration
-- [ ] Add screenshots and demonstrations
+## API
 
-## 🔐 Responsible Use
+`GET /api/events` returns recent simulated events as JSON. Events include fields such as `id`, `time`, `type`, `severity`, `country`, `ip`, `lat`, and `lon`.
 
-This project is intended for cybersecurity
-education, defensive research, and authorized
-security testing.
+The example source addresses use reserved documentation IP ranges and do not represent identified real-world attackers.
 
-It is an experimental learning project, not a
-production-ready security monitoring system.
+## Purple team direction
 
-## 👨‍💻 Developer
+The goal is to connect **authorized offensive-security lab exercises** with defensive monitoring and detection validation. Planned work includes real log ingestion, controlled attack-lab integration, event correlation, and security automation. These are roadmap items, not currently claimed production capabilities.
 
-**GitHub:** [@cabralisjota](https://github.com/cabralisjota)
+## Responsible use
 
-**Focus:** Cybersecurity, Python, network
-forensics, and security automation.
+Use only on systems you own or are explicitly authorized to test. This project is intended for learning, defensive analysis, and controlled security exercises.
 
----
-
-<!-- portfolio-overview:end -->
-
-# Sentinel 2.0
-### Cybersecurity Threat Intelligence Dashboard
-
-https://sentinel-2-0.onrender.com/
-
-Sentinel 2.0 is a Python Flask-based Security Operations
-Center (SOC) dashboard designed for security monitoring
-and threat visualization.
-
-## Features
-- Interactive geographic attack map
-- Simulated cybersecurity event generation
-- Animated attack routes and threat indicators
-- Live security statistics
-- Threat severity classification
-- Security incident event stream
-- Searchable security events
-- Responsive dashboard interface
-
-## Technologies
-- Python 3
-- Flask
-- JavaScript
-- HTML5 and CSS3
-- Leaflet.js
-- GeoJSON
-- Canvas API
-- Termux
-
-## Installation
-
-Install Flask:
-
-    pip install flask
-
-Run the application:
-
-    python app.py
-
-Open:
-
-    https://sentinel-2-0.onrender.com/
-
-## Project Status
-Educational prototype under active development.
-
-Current threat events are simulated. The application
-does not currently inspect real network traffic or
-provide production intrusion detection.
-
-## Future Development
-- SQLite event persistence
-- Authentication log analysis
-- Rule-based threat detection
-- Incident investigation tools
-- Defensive network monitoring
-
-## Author
-Independent cybersecurity development project.
+**Developer:** [@cabralisjota](https://github.com/cabralisjota)
