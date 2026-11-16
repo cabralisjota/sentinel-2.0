@@ -9,3 +9,13 @@ venv/
 *.log
 app_backup.py
 app_before_*.py
+
+# Local Access Lab data
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+login.json
+.env
+.env.*
+__pycache__/

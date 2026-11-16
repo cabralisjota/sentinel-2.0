@@ -7,6 +7,8 @@ import threading
 import time
 
 app = Flask(__name__)
+from access_soc import register_access_soc
+register_access_soc(app)
 events = []
 lock = threading.Lock()
 event_id = 0
